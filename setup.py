@@ -13,8 +13,8 @@ import re
 ###Python version check
 #print "Python version detected: %s" % sys.version_info
 if sys.version_info[0] < 3:
-    print "Python Version %d.%d.%d found" % (sys.version_info[0], sys.version_info[1], sys.version_info[2])
-    print "Python version >= 3 needed!"
+    print("Python Version %d.%d.%d found" % (sys.version_info[0], sys.version_info[1], sys.version_info[2]))
+    print("Python version >= 3 needed!")
     sys.exit(0)
 
 ###Version load, adapted from http://stackoverflow.com/questions/2058802/how-can-i-get-the-version-defined-in-setup-py-setuptools-in-my-package/3619714#3619714
@@ -31,7 +31,7 @@ else:
     if mo:
         verstr = mo.group(1)
     else:
-        print "unable to find version in %s" % (VERSIONFILE,)
+        print("unable to find version in %s" % (VERSIONFILE,))
         raise RuntimeError("if %s.py exists, it is required to be well-formed" % (VERSIONFILE,))
 
 setup(
